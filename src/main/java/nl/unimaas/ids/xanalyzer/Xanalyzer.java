@@ -39,7 +39,7 @@ public class Xanalyzer {
 			}
 		}
 		
-		printNode(node, "" , "  ");
+		printNode(node, "" , "| ");
 		
 		xmlStreamReader.close();
 		
