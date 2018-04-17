@@ -15,7 +15,6 @@ public class Xanalyzer {
 		
 		Node node = new Node();
 		node.name = "XML Document";
-//		System.out.println(node);
 		
 		XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
 		XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(new FileInputStream(args[0]));
