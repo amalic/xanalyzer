@@ -21,18 +21,18 @@ docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.x
 
 #### Example output for drugbank
  ```
-# Node{name: "XML Document", count: 1 , valueCount: 0 (0%), minLength: -1, maxLength: 0}
-| # Node{name: "drugbank", count: 1 (100%), valueCount: 11034 (1103400%), minLength: 0, maxLength: 0, parent.name: "XML Document"}
+# Node{name: "XML Document", count: 1 , valueCount: 0 (0%), minLength: N/A, maxLength: N/A}
+| # Node{name: "drugbank", count: 1 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "XML Document"}
 | | * Attribute{name: "schemaLocation", count: 1 (100%), valueCount: 1 (100%), minLength: 63, maxLength: 63, parent.name: "drugbank"}
 | | * Attribute{name: "exported-on", count: 1 (100%), valueCount: 1 (100%), minLength: 10, maxLength: 10, parent.name: "drugbank"}
 | | * Attribute{name: "version", count: 1 (100%), valueCount: 1 (100%), minLength: 3, maxLength: 3, parent.name: "drugbank"}
-| | # Node{name: "drug", count: 11033 (1103300%), valueCount: 584028 (5293.5%), minLength: 0, maxLength: 0, parent.name: "drugbank"}
+| | # Node{name: "drug", count: 11033 (1103300%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drugbank"}
 | | | * Attribute{name: "created", count: 11033 (100%), valueCount: 11033 (100%), minLength: 10, maxLength: 10, parent.name: "drug"}
 | | | * Attribute{name: "type", count: 11033 (100%), valueCount: 11033 (100%), minLength: 7, maxLength: 14, parent.name: "drug"}
 | | | * Attribute{name: "updated", count: 11033 (100%), valueCount: 11033 (100%), minLength: 10, maxLength: 10, parent.name: "drug"}
-| | | # Node{name: "toxicity", count: 11033 (100%), valueCount: 9216 (83.5%), minLength: 0, maxLength: 1973, parent.name: "drug"}
-| | | # Node{name: "snp-adverse-drug-reactions", count: 11033 (100%), valueCount: 158 (1.4%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "reaction", count: 113 (1%), valueCount: 1017 (900%), minLength: 0, maxLength: 0, parent.name: "snp-adverse-drug-reactions"}
+| | | # Node{name: "toxicity", count: 11033 (100%), valueCount: 7517 (68.1%), minLength: 1, maxLength: 1973, parent.name: "drug"}
+| | | # Node{name: "snp-adverse-drug-reactions", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "reaction", count: 113 (1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "snp-adverse-drug-reactions"}
 | | | | | # Node{name: "pubmed-id", count: 113 (100%), valueCount: 108 (95.6%), minLength: 8, maxLength: 8, parent.name: "reaction"}
 | | | | | # Node{name: "protein-name", count: 113 (100%), valueCount: 113 (100%), minLength: 8, maxLength: 64, parent.name: "reaction"}
 | | | | | # Node{name: "uniprot-id", count: 113 (100%), valueCount: 113 (100%), minLength: 6, maxLength: 6, parent.name: "reaction"}
@@ -41,61 +41,61 @@ docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.x
 | | | | | # Node{name: "rs-id", count: 113 (100%), valueCount: 100 (88.5%), minLength: 6, maxLength: 11, parent.name: "reaction"}
 | | | | | # Node{name: "gene-symbol", count: 113 (100%), valueCount: 113 (100%), minLength: 2, maxLength: 8, parent.name: "reaction"}
 | | | | | # Node{name: "adverse-reaction", count: 113 (100%), valueCount: 203 (179.6%), minLength: 1, maxLength: 35, parent.name: "reaction"}
-| | | # Node{name: "general-references", count: 11033 (100%), valueCount: 44132 (400%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "links", count: 11033 (100%), valueCount: 2017 (18.3%), minLength: 0, maxLength: 0, parent.name: "general-references"}
-| | | | | # Node{name: "link", count: 1462 (13.3%), valueCount: 4386 (300%), minLength: 0, maxLength: 0, parent.name: "links"}
+| | | # Node{name: "general-references", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "links", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "general-references"}
+| | | | | # Node{name: "link", count: 1462 (13.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "links"}
 | | | | | | # Node{name: "title", count: 1462 (100%), valueCount: 1468 (100.4%), minLength: 1, maxLength: 254, parent.name: "link"}
 | | | | | | # Node{name: "url", count: 1462 (100%), valueCount: 2230 (152.5%), minLength: 1, maxLength: 694, parent.name: "link"}
-| | | | # Node{name: "articles", count: 11033 (100%), valueCount: 9739 (88.3%), minLength: 0, maxLength: 0, parent.name: "general-references"}
-| | | | | # Node{name: "article", count: 7452 (67.5%), valueCount: 22356 (300%), minLength: 0, maxLength: 0, parent.name: "articles"}
+| | | | # Node{name: "articles", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "general-references"}
+| | | | | # Node{name: "article", count: 7452 (67.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "articles"}
 | | | | | | # Node{name: "pubmed-id", count: 7452 (100%), valueCount: 7434 (99.8%), minLength: 3, maxLength: 8, parent.name: "article"}
 | | | | | | # Node{name: "citation", count: 7452 (100%), valueCount: 7488 (100.5%), minLength: 1, maxLength: 1224, parent.name: "article"}
-| | | | # Node{name: "textbooks", count: 11033 (100%), valueCount: 290 (2.6%), minLength: 0, maxLength: 0, parent.name: "general-references"}
-| | | | | # Node{name: "textbook", count: 174 (1.6%), valueCount: 522 (300%), minLength: 0, maxLength: 0, parent.name: "textbooks"}
+| | | | # Node{name: "textbooks", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "general-references"}
+| | | | | # Node{name: "textbook", count: 174 (1.6%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "textbooks"}
 | | | | | | # Node{name: "citation", count: 174 (100%), valueCount: 212 (121.8%), minLength: 1, maxLength: 224, parent.name: "textbook"}
 | | | | | | # Node{name: "isbn", count: 174 (100%), valueCount: 85 (48.9%), minLength: 10, maxLength: 17, parent.name: "textbook"}
 | | | # Node{name: "average-mass", count: 9100 (82.5%), valueCount: 9100 (100%), minLength: 5, maxLength: 9, parent.name: "drug"}
-| | | # Node{name: "pharmacodynamics", count: 11033 (100%), valueCount: 10190 (92.4%), minLength: 0, maxLength: 2393, parent.name: "drug"}
+| | | # Node{name: "pharmacodynamics", count: 11033 (100%), valueCount: 9587 (86.9%), minLength: 1, maxLength: 2393, parent.name: "drug"}
 | | | # Node{name: "msds", count: 1295 (11.7%), valueCount: 1295 (100%), minLength: 65, maxLength: 65, parent.name: "drug"}
-| | | # Node{name: "calculated-properties", count: 9736 (88.2%), valueCount: 242969 (2495.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "property", count: 233866 (2402.1%), valueCount: 935464 (400%), minLength: 0, maxLength: 0, parent.name: "calculated-properties"}
+| | | # Node{name: "calculated-properties", count: 9736 (88.2%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "property", count: 233866 (2402.1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "calculated-properties"}
 | | | | | # Node{name: "kind", count: 233866 (100%), valueCount: 233866 (100%), minLength: 4, maxLength: 24, parent.name: "property"}
 | | | | | # Node{name: "source", count: 233866 (100%), valueCount: 233866 (100%), minLength: 6, maxLength: 8, parent.name: "property"}
 | | | | | # Node{name: "value", count: 233866 (100%), valueCount: 252376 (107.9%), minLength: 1, maxLength: 2582, parent.name: "property"}
 | | | # Node{name: "cas-number", count: 11033 (100%), valueCount: 5629 (51%), minLength: 7, maxLength: 12, parent.name: "drug"}
-| | | # Node{name: "mixtures", count: 11033 (100%), valueCount: 258132 (2339.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "mixture", count: 255243 (2313.5%), valueCount: 765729 (300%), minLength: 0, maxLength: 0, parent.name: "mixtures"}
+| | | # Node{name: "mixtures", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "mixture", count: 255243 (2313.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "mixtures"}
 | | | | | # Node{name: "name", count: 255243 (100%), valueCount: 258981 (101.5%), minLength: 1, maxLength: 367, parent.name: "mixture"}
 | | | | | # Node{name: "ingredients", count: 255243 (100%), valueCount: 255243 (100%), minLength: 3, maxLength: 1921, parent.name: "mixture"}
-| | | # Node{name: "external-links", count: 11033 (100%), valueCount: 4682 (42.4%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "external-link", count: 3085 (28%), valueCount: 9255 (300%), minLength: 0, maxLength: 0, parent.name: "external-links"}
+| | | # Node{name: "external-links", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "external-link", count: 3085 (28%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "external-links"}
 | | | | | # Node{name: "resource", count: 3085 (100%), valueCount: 3085 (100%), minLength: 6, maxLength: 9, parent.name: "external-link"}
 | | | | | # Node{name: "url", count: 3085 (100%), valueCount: 3173 (102.9%), minLength: 1, maxLength: 90, parent.name: "external-link"}
-| | | # Node{name: "pdb-entries", count: 11033 (100%), valueCount: 104020 (942.8%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "pdb-entries", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "pdb-entry", count: 98634 (894%), valueCount: 98634 (100%), minLength: 4, maxLength: 4, parent.name: "pdb-entries"}
-| | | # Node{name: "food-interactions", count: 11033 (100%), valueCount: 1853 (16.8%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "food-interactions", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "food-interaction", count: 1194 (10.8%), valueCount: 1228 (102.8%), minLength: 1, maxLength: 414, parent.name: "food-interactions"}
 | | | # Node{name: "state", count: 8587 (77.8%), valueCount: 8587 (100%), minLength: 3, maxLength: 6, parent.name: "drug"}
-| | | # Node{name: "synthesis-reference", count: 11033 (100%), valueCount: 2024 (18.3%), minLength: 0, maxLength: 845, parent.name: "drug"}
-| | | # Node{name: "mechanism-of-action", count: 11033 (100%), valueCount: 9706 (88%), minLength: 0, maxLength: 2731, parent.name: "drug"}
-| | | # Node{name: "absorption", count: 11033 (100%), valueCount: 3152 (28.6%), minLength: 0, maxLength: 1060, parent.name: "drug"}
-| | | # Node{name: "synonyms", count: 11033 (100%), valueCount: 20962 (190%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "synthesis-reference", count: 11033 (100%), valueCount: 1791 (16.2%), minLength: 1, maxLength: 845, parent.name: "drug"}
+| | | # Node{name: "mechanism-of-action", count: 11033 (100%), valueCount: 8132 (73.7%), minLength: 1, maxLength: 2731, parent.name: "drug"}
+| | | # Node{name: "absorption", count: 11033 (100%), valueCount: 2528 (22.9%), minLength: 1, maxLength: 1060, parent.name: "drug"}
+| | | # Node{name: "synonyms", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "synonym", count: 17148 (155.4%), valueCount: 17433 (101.7%), minLength: 1, maxLength: 434, parent.name: "synonyms"}
-| | | | | * Attribute{name: "coder", count: 17148 (100%), valueCount: 17148 (100%), minLength: 0, maxLength: 61, parent.name: "synonym"}
-| | | | | * Attribute{name: "language", count: 17148 (100%), valueCount: 17148 (100%), minLength: 0, maxLength: 29, parent.name: "synonym"}
-| | | # Node{name: "pathways", count: 11033 (100%), valueCount: 5326 (48.3%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "pathway", count: 4639 (42%), valueCount: 27834 (600%), minLength: 0, maxLength: 0, parent.name: "pathways"}
-| | | | | # Node{name: "drugs", count: 4639 (100%), valueCount: 67115 (1446.8%), minLength: 0, maxLength: 0, parent.name: "pathway"}
-| | | | | | # Node{name: "drug", count: 62476 (1346.8%), valueCount: 187428 (300%), minLength: 0, maxLength: 0, parent.name: "drugs"}
+| | | | | * Attribute{name: "coder", count: 17148 (100%), valueCount: 2975 (17.3%), minLength: 2, maxLength: 61, parent.name: "synonym"}
+| | | | | * Attribute{name: "language", count: 17148 (100%), valueCount: 2707 (15.8%), minLength: 5, maxLength: 29, parent.name: "synonym"}
+| | | # Node{name: "pathways", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "pathway", count: 4639 (42%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pathways"}
+| | | | | # Node{name: "drugs", count: 4639 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pathway"}
+| | | | | | # Node{name: "drug", count: 62476 (1346.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drugs"}
 | | | | | | | # Node{name: "name", count: 62476 (100%), valueCount: 62476 (100%), minLength: 3, maxLength: 70, parent.name: "drug"}
 | | | | | | | # Node{name: "drugbank-id", count: 62476 (100%), valueCount: 62476 (100%), minLength: 7, maxLength: 7, parent.name: "drug"}
 | | | | | # Node{name: "name", count: 4639 (100%), valueCount: 4655 (100.3%), minLength: 1, maxLength: 100, parent.name: "pathway"}
-| | | | | # Node{name: "enzymes", count: 4639 (100%), valueCount: 88319 (1903.8%), minLength: 0, maxLength: 0, parent.name: "pathway"}
+| | | | | # Node{name: "enzymes", count: 4639 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pathway"}
 | | | | | | # Node{name: "uniprot-id", count: 83932 (1809.3%), valueCount: 83932 (100%), minLength: 6, maxLength: 10, parent.name: "enzymes"}
 | | | | | # Node{name: "category", count: 4639 (100%), valueCount: 4639 (100%), minLength: 7, maxLength: 15, parent.name: "pathway"}
 | | | | | # Node{name: "smpdb-id", count: 4639 (100%), valueCount: 4639 (100%), minLength: 8, maxLength: 8, parent.name: "pathway"}
-| | | # Node{name: "snp-effects", count: 11033 (100%), valueCount: 291 (2.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "effect", count: 211 (1.9%), valueCount: 1899 (900%), minLength: 0, maxLength: 0, parent.name: "snp-effects"}
+| | | # Node{name: "snp-effects", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "effect", count: 211 (1.9%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "snp-effects"}
 | | | | | # Node{name: "pubmed-id", count: 211 (100%), valueCount: 188 (89.1%), minLength: 7, maxLength: 8, parent.name: "effect"}
 | | | | | # Node{name: "protein-name", count: 211 (100%), valueCount: 211 (100%), minLength: 15, maxLength: 64, parent.name: "effect"}
 | | | | | # Node{name: "uniprot-id", count: 211 (100%), valueCount: 211 (100%), minLength: 6, maxLength: 6, parent.name: "effect"}
@@ -104,63 +104,63 @@ docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.x
 | | | | | # Node{name: "rs-id", count: 211 (100%), valueCount: 194 (91.9%), minLength: 6, maxLength: 11, parent.name: "effect"}
 | | | | | # Node{name: "gene-symbol", count: 211 (100%), valueCount: 211 (100%), minLength: 3, maxLength: 7, parent.name: "effect"}
 | | | | | # Node{name: "defining-change", count: 211 (100%), valueCount: 349 (165.4%), minLength: 1, maxLength: 31, parent.name: "effect"}
-| | | # Node{name: "carriers", count: 11033 (100%), valueCount: 840 (7.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "carrier", count: 482 (4.4%), valueCount: 3872 (803.3%), minLength: 0, maxLength: 0, parent.name: "carriers"}
+| | | # Node{name: "carriers", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "carrier", count: 482 (4.4%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "carriers"}
 | | | | | * Attribute{name: "position", count: 407 (84.4%), valueCount: 407 (100%), minLength: 1, maxLength: 2, parent.name: "carrier"}
-| | | | | # Node{name: "polypeptide", count: 498 (103.3%), valueCount: 9462 (1900%), minLength: 0, maxLength: 0, parent.name: "carrier"}
+| | | | | # Node{name: "polypeptide", count: 498 (103.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "carrier"}
 | | | | | | * Attribute{name: "id", count: 498 (100%), valueCount: 498 (100%), minLength: 6, maxLength: 6, parent.name: "polypeptide"}
 | | | | | | * Attribute{name: "source", count: 498 (100%), valueCount: 498 (100%), minLength: 10, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "external-identifiers", count: 498 (100%), valueCount: 3445 (691.8%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "external-identifier", count: 2947 (591.8%), valueCount: 8841 (300%), minLength: 0, maxLength: 0, parent.name: "external-identifiers"}
+| | | | | | # Node{name: "external-identifiers", count: 498 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "external-identifier", count: 2947 (591.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "external-identifiers"}
 | | | | | | | | # Node{name: "identifier", count: 2947 (100%), valueCount: 2947 (100%), minLength: 2, maxLength: 11, parent.name: "external-identifier"}
 | | | | | | | | # Node{name: "resource", count: 2947 (100%), valueCount: 2947 (100%), minLength: 8, maxLength: 39, parent.name: "external-identifier"}
 | | | | | | # Node{name: "theoretical-pi", count: 498 (100%), valueCount: 470 (94.4%), minLength: 3, maxLength: 4, parent.name: "polypeptide"}
 | | | | | | # Node{name: "organism", count: 498 (100%), valueCount: 498 (100%), minLength: 5, maxLength: 5, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "ncbi-taxonomy-id", count: 498 (100%), valueCount: 498 (100%), minLength: 4, maxLength: 4, parent.name: "organism"}
 | | | | | | # Node{name: "molecular-weight", count: 498 (100%), valueCount: 498 (100%), minLength: 7, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "synonyms", count: 498 (100%), valueCount: 1909 (383.3%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
+| | | | | | # Node{name: "synonyms", count: 498 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
 | | | | | | | # Node{name: "synonym", count: 1411 (283.3%), valueCount: 1411 (100%), minLength: 2, maxLength: 65, parent.name: "synonyms"}
 | | | | | | # Node{name: "general-function", count: 498 (100%), valueCount: 439 (88.2%), minLength: 15, maxLength: 249, parent.name: "polypeptide"}
-| | | | | | # Node{name: "pfams", count: 498 (100%), valueCount: 1046 (210%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "pfam", count: 548 (110%), valueCount: 1644 (300%), minLength: 0, maxLength: 0, parent.name: "pfams"}
+| | | | | | # Node{name: "pfams", count: 498 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "pfam", count: 548 (110%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pfams"}
 | | | | | | | | # Node{name: "identifier", count: 548 (100%), valueCount: 548 (100%), minLength: 7, maxLength: 7, parent.name: "pfam"}
 | | | | | | | | # Node{name: "name", count: 548 (100%), valueCount: 548 (100%), minLength: 2, maxLength: 15, parent.name: "pfam"}
 | | | | | | # Node{name: "gene-name", count: 498 (100%), valueCount: 498 (100%), minLength: 2, maxLength: 8, parent.name: "polypeptide"}
-| | | | | | # Node{name: "amino-acid-sequence", count: 498 (100%), valueCount: 2854 (573.1%), minLength: 0, maxLength: 142, parent.name: "polypeptide"}
+| | | | | | # Node{name: "amino-acid-sequence", count: 498 (100%), valueCount: 2853 (572.9%), minLength: 1, maxLength: 142, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 498 (100%), valueCount: 498 (100%), minLength: 5, maxLength: 5, parent.name: "amino-acid-sequence"}
 | | | | | | # Node{name: "specific-function", count: 498 (100%), valueCount: 496 (99.6%), minLength: 16, maxLength: 1278, parent.name: "polypeptide"}
 | | | | | | # Node{name: "name", count: 498 (100%), valueCount: 498 (100%), minLength: 6, maxLength: 65, parent.name: "polypeptide"}
 | | | | | | # Node{name: "transmembrane-regions", count: 498 (100%), valueCount: 88 (17.7%), minLength: 5, maxLength: 16, parent.name: "polypeptide"}
 | | | | | | # Node{name: "locus", count: 498 (100%), valueCount: 481 (96.6%), minLength: 4, maxLength: 13, parent.name: "polypeptide"}
 | | | | | | # Node{name: "signal-regions", count: 498 (100%), valueCount: 406 (81.5%), minLength: 4, maxLength: 4, parent.name: "polypeptide"}
-| | | | | | # Node{name: "gene-sequence", count: 498 (100%), valueCount: 6520 (1309.2%), minLength: 0, maxLength: 151, parent.name: "polypeptide"}
+| | | | | | # Node{name: "gene-sequence", count: 498 (100%), valueCount: 6519 (1309%), minLength: 1, maxLength: 151, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 498 (100%), valueCount: 498 (100%), minLength: 5, maxLength: 5, parent.name: "gene-sequence"}
-| | | | | | # Node{name: "go-classifiers", count: 498 (100%), valueCount: 12073 (2424.3%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "go-classifier", count: 11575 (2324.3%), valueCount: 34725 (300%), minLength: 0, maxLength: 0, parent.name: "go-classifiers"}
+| | | | | | # Node{name: "go-classifiers", count: 498 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "go-classifier", count: 11575 (2324.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "go-classifiers"}
 | | | | | | | | # Node{name: "description", count: 11575 (100%), valueCount: 11575 (100%), minLength: 4, maxLength: 101, parent.name: "go-classifier"}
 | | | | | | | | # Node{name: "category", count: 11575 (100%), valueCount: 11575 (100%), minLength: 7, maxLength: 9, parent.name: "go-classifier"}
 | | | | | | # Node{name: "cellular-location", count: 498 (100%), valueCount: 479 (96.2%), minLength: 7, maxLength: 33, parent.name: "polypeptide"}
 | | | | | | # Node{name: "chromosome-location", count: 498 (100%), valueCount: 494 (99.2%), minLength: 1, maxLength: 2, parent.name: "polypeptide"}
 | | | | | # Node{name: "organism", count: 482 (100%), valueCount: 482 (100%), minLength: 5, maxLength: 12, parent.name: "carrier"}
-| | | | | # Node{name: "references", count: 482 (100%), valueCount: 1928 (400%), minLength: 0, maxLength: 0, parent.name: "carrier"}
-| | | | | | # Node{name: "links", count: 482 (100%), valueCount: 44 (9.1%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "link", count: 22 (4.6%), valueCount: 66 (300%), minLength: 0, maxLength: 0, parent.name: "links"}
+| | | | | # Node{name: "references", count: 482 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "carrier"}
+| | | | | | # Node{name: "links", count: 482 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "link", count: 22 (4.6%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "links"}
 | | | | | | | | # Node{name: "title", count: 22 (100%), valueCount: 22 (100%), minLength: 4, maxLength: 70, parent.name: "link"}
 | | | | | | | | # Node{name: "url", count: 22 (100%), valueCount: 22 (100%), minLength: 42, maxLength: 152, parent.name: "link"}
-| | | | | | # Node{name: "articles", count: 482 (100%), valueCount: 1111 (230.5%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "article", count: 736 (152.7%), valueCount: 2208 (300%), minLength: 0, maxLength: 0, parent.name: "articles"}
+| | | | | | # Node{name: "articles", count: 482 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "article", count: 736 (152.7%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "articles"}
 | | | | | | | | # Node{name: "pubmed-id", count: 736 (100%), valueCount: 736 (100%), minLength: 6, maxLength: 8, parent.name: "article"}
 | | | | | | | | # Node{name: "citation", count: 736 (100%), valueCount: 736 (100%), minLength: 57, maxLength: 445, parent.name: "article"}
-| | | | | | # Node{name: "textbooks", count: 482 (100%), valueCount: 16 (3.3%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "textbook", count: 8 (1.7%), valueCount: 24 (300%), minLength: 0, maxLength: 0, parent.name: "textbooks"}
+| | | | | | # Node{name: "textbooks", count: 482 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "textbook", count: 8 (1.7%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "textbooks"}
 | | | | | | | | # Node{name: "citation", count: 8 (100%), valueCount: 8 (100%), minLength: 54, maxLength: 127, parent.name: "textbook"}
 | | | | | | | | # Node{name: "isbn", count: 8 (100%), valueCount: 2 (25%), minLength: 16, maxLength: 16, parent.name: "textbook"}
 | | | | | # Node{name: "known-action", count: 482 (100%), valueCount: 482 (100%), minLength: 2, maxLength: 7, parent.name: "carrier"}
 | | | | | # Node{name: "name", count: 482 (100%), valueCount: 482 (100%), minLength: 9, maxLength: 65, parent.name: "carrier"}
 | | | | | # Node{name: "id", count: 482 (100%), valueCount: 482 (100%), minLength: 9, maxLength: 9, parent.name: "carrier"}
-| | | | | # Node{name: "actions", count: 482 (100%), valueCount: 374 (77.6%), minLength: 0, maxLength: 0, parent.name: "carrier"}
+| | | | | # Node{name: "actions", count: 482 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "carrier"}
 | | | | | | # Node{name: "action", count: 188 (39%), valueCount: 188 (100%), minLength: 6, maxLength: 13, parent.name: "actions"}
-| | | # Node{name: "classification", count: 9300 (84.3%), valueCount: 388085 (4173%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "classification", count: 9300 (84.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "direct-parent", count: 9300 (100%), valueCount: 9358 (100.6%), minLength: 1, maxLength: 60, parent.name: "classification"}
 | | | | # Node{name: "alternative-parent", count: 112263 (1207.1%), valueCount: 112282 (100%), minLength: 1, maxLength: 54, parent.name: "classification"}
 | | | | # Node{name: "superclass", count: 9300 (100%), valueCount: 9299 (100%), minLength: 10, maxLength: 41, parent.name: "classification"}
@@ -169,207 +169,207 @@ docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.x
 | | | | # Node{name: "kingdom", count: 9300 (100%), valueCount: 9300 (100%), minLength: 17, maxLength: 19, parent.name: "classification"}
 | | | | # Node{name: "class", count: 9300 (100%), valueCount: 9334 (100.4%), minLength: 1, maxLength: 60, parent.name: "classification"}
 | | | | # Node{name: "substituent", count: 210722 (2265.8%), valueCount: 210805 (100%), minLength: 1, maxLength: 66, parent.name: "classification"}
-| | | # Node{name: "half-life", count: 11033 (100%), valueCount: 2500 (22.7%), minLength: 0, maxLength: 532, parent.name: "drug"}
+| | | # Node{name: "half-life", count: 11033 (100%), valueCount: 2322 (21%), minLength: 1, maxLength: 532, parent.name: "drug"}
 | | | # Node{name: "monoisotopic-mass", count: 9100 (82.5%), valueCount: 9100 (100%), minLength: 4, maxLength: 14, parent.name: "drug"}
-| | | # Node{name: "volume-of-distribution", count: 11033 (100%), valueCount: 1359 (12.3%), minLength: 0, maxLength: 590, parent.name: "drug"}
-| | | # Node{name: "route-of-elimination", count: 11033 (100%), valueCount: 1800 (16.3%), minLength: 0, maxLength: 797, parent.name: "drug"}
+| | | # Node{name: "volume-of-distribution", count: 11033 (100%), valueCount: 1161 (10.5%), minLength: 1, maxLength: 590, parent.name: "drug"}
+| | | # Node{name: "route-of-elimination", count: 11033 (100%), valueCount: 1631 (14.8%), minLength: 1, maxLength: 797, parent.name: "drug"}
 | | | # Node{name: "name", count: 11033 (100%), valueCount: 11522 (104.4%), minLength: 1, maxLength: 221, parent.name: "drug"}
-| | | # Node{name: "metabolism", count: 11033 (100%), valueCount: 2888 (26.2%), minLength: 0, maxLength: 1379, parent.name: "drug"}
-| | | # Node{name: "indication", count: 11033 (100%), valueCount: 7569 (68.6%), minLength: 0, maxLength: 1898, parent.name: "drug"}
-| | | # Node{name: "affected-organisms", count: 11033 (100%), valueCount: 4919 (44.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "metabolism", count: 11033 (100%), valueCount: 2565 (23.2%), minLength: 1, maxLength: 1379, parent.name: "drug"}
+| | | # Node{name: "indication", count: 11033 (100%), valueCount: 6927 (62.8%), minLength: 1, maxLength: 1898, parent.name: "drug"}
+| | | # Node{name: "affected-organisms", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "affected-organism", count: 2642 (23.9%), valueCount: 2642 (100%), minLength: 5, maxLength: 74, parent.name: "affected-organisms"}
-| | | # Node{name: "experimental-properties", count: 11033 (100%), valueCount: 8354 (75.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "property", count: 6084 (55.1%), valueCount: 24336 (400%), minLength: 0, maxLength: 0, parent.name: "experimental-properties"}
+| | | # Node{name: "experimental-properties", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "property", count: 6084 (55.1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "experimental-properties"}
 | | | | | # Node{name: "kind", count: 6084 (100%), valueCount: 6084 (100%), minLength: 3, maxLength: 18, parent.name: "property"}
-| | | | | # Node{name: "source", count: 6084 (100%), valueCount: 5164 (84.9%), minLength: 0, maxLength: 357, parent.name: "property"}
+| | | | | # Node{name: "source", count: 6084 (100%), valueCount: 5003 (82.2%), minLength: 1, maxLength: 357, parent.name: "property"}
 | | | | | # Node{name: "value", count: 6084 (100%), valueCount: 6200 (101.9%), minLength: 1, maxLength: 240, parent.name: "property"}
-| | | # Node{name: "external-identifiers", count: 11033 (100%), valueCount: 73888 (669.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "external-identifier", count: 62926 (570.3%), valueCount: 188778 (300%), minLength: 0, maxLength: 0, parent.name: "external-identifiers"}
+| | | # Node{name: "external-identifiers", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "external-identifier", count: 62926 (570.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "external-identifiers"}
 | | | | | # Node{name: "identifier", count: 62926 (100%), valueCount: 62926 (100%), minLength: 1, maxLength: 76, parent.name: "external-identifier"}
 | | | | | # Node{name: "resource", count: 62926 (100%), valueCount: 62926 (100%), minLength: 3, maxLength: 28, parent.name: "external-identifier"}
-| | | # Node{name: "transporters", count: 11033 (100%), valueCount: 2933 (26.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "transporter", count: 2184 (19.8%), valueCount: 17491 (800.9%), minLength: 0, maxLength: 0, parent.name: "transporters"}
+| | | # Node{name: "transporters", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "transporter", count: 2184 (19.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "transporters"}
 | | | | | * Attribute{name: "position", count: 2184 (100%), valueCount: 2184 (100%), minLength: 1, maxLength: 2, parent.name: "transporter"}
-| | | | | # Node{name: "polypeptide", count: 2203 (100.9%), valueCount: 41857 (1900%), minLength: 0, maxLength: 0, parent.name: "transporter"}
+| | | | | # Node{name: "polypeptide", count: 2203 (100.9%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "transporter"}
 | | | | | | * Attribute{name: "id", count: 2203 (100%), valueCount: 2203 (100%), minLength: 6, maxLength: 6, parent.name: "polypeptide"}
 | | | | | | * Attribute{name: "source", count: 2203 (100%), valueCount: 2203 (100%), minLength: 6, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "external-identifiers", count: 2203 (100%), valueCount: 15536 (705.2%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "external-identifier", count: 13333 (605.2%), valueCount: 39999 (300%), minLength: 0, maxLength: 0, parent.name: "external-identifiers"}
+| | | | | | # Node{name: "external-identifiers", count: 2203 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "external-identifier", count: 13333 (605.2%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "external-identifiers"}
 | | | | | | | | # Node{name: "identifier", count: 13333 (100%), valueCount: 13333 (100%), minLength: 2, maxLength: 12, parent.name: "external-identifier"}
 | | | | | | | | # Node{name: "resource", count: 13333 (100%), valueCount: 13333 (100%), minLength: 6, maxLength: 39, parent.name: "external-identifier"}
 | | | | | | # Node{name: "theoretical-pi", count: 2203 (100%), valueCount: 2075 (94.2%), minLength: 3, maxLength: 4, parent.name: "polypeptide"}
 | | | | | | # Node{name: "organism", count: 2203 (100%), valueCount: 2203 (100%), minLength: 5, maxLength: 29, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "ncbi-taxonomy-id", count: 2203 (100%), valueCount: 2203 (100%), minLength: 3, maxLength: 5, parent.name: "organism"}
 | | | | | | # Node{name: "molecular-weight", count: 2203 (100%), valueCount: 2203 (100%), minLength: 7, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "synonyms", count: 2203 (100%), valueCount: 15053 (683.3%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
+| | | | | | # Node{name: "synonyms", count: 2203 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
 | | | | | | | # Node{name: "synonym", count: 12850 (583.3%), valueCount: 12850 (100%), minLength: 2, maxLength: 83, parent.name: "synonyms"}
 | | | | | | # Node{name: "general-function", count: 2203 (100%), valueCount: 2197 (99.7%), minLength: 12, maxLength: 802, parent.name: "polypeptide"}
-| | | | | | # Node{name: "pfams", count: 2203 (100%), valueCount: 5670 (257.4%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "pfam", count: 3467 (157.4%), valueCount: 10401 (300%), minLength: 0, maxLength: 0, parent.name: "pfams"}
+| | | | | | # Node{name: "pfams", count: 2203 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "pfam", count: 3467 (157.4%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pfams"}
 | | | | | | | | # Node{name: "identifier", count: 3467 (100%), valueCount: 3467 (100%), minLength: 7, maxLength: 7, parent.name: "pfam"}
 | | | | | | | | # Node{name: "name", count: 3467 (100%), valueCount: 3467 (100%), minLength: 2, maxLength: 15, parent.name: "pfam"}
 | | | | | | # Node{name: "gene-name", count: 2203 (100%), valueCount: 2202 (100%), minLength: 2, maxLength: 8, parent.name: "polypeptide"}
-| | | | | | # Node{name: "amino-acid-sequence", count: 2203 (100%), valueCount: 20612 (935.6%), minLength: 0, maxLength: 154, parent.name: "polypeptide"}
+| | | | | | # Node{name: "amino-acid-sequence", count: 2203 (100%), valueCount: 20600 (935.1%), minLength: 1, maxLength: 154, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 2203 (100%), valueCount: 2203 (100%), minLength: 5, maxLength: 5, parent.name: "amino-acid-sequence"}
 | | | | | | # Node{name: "specific-function", count: 2203 (100%), valueCount: 2218 (100.7%), minLength: 1, maxLength: 1466, parent.name: "polypeptide"}
 | | | | | | # Node{name: "name", count: 2203 (100%), valueCount: 2203 (100%), minLength: 7, maxLength: 77, parent.name: "polypeptide"}
 | | | | | | # Node{name: "transmembrane-regions", count: 2203 (100%), valueCount: 13127 (595.9%), minLength: 5, maxLength: 19, parent.name: "polypeptide"}
 | | | | | | # Node{name: "locus", count: 2203 (100%), valueCount: 1950 (88.5%), minLength: 3, maxLength: 17, parent.name: "polypeptide"}
 | | | | | | # Node{name: "signal-regions", count: 2203 (100%), valueCount: 21 (1%), minLength: 4, maxLength: 4, parent.name: "polypeptide"}
-| | | | | | # Node{name: "gene-sequence", count: 2203 (100%), valueCount: 49846 (2262.6%), minLength: 0, maxLength: 164, parent.name: "polypeptide"}
+| | | | | | # Node{name: "gene-sequence", count: 2203 (100%), valueCount: 49800 (2260.6%), minLength: 1, maxLength: 164, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 2203 (100%), valueCount: 2203 (100%), minLength: 5, maxLength: 5, parent.name: "gene-sequence"}
-| | | | | | # Node{name: "go-classifiers", count: 2203 (100%), valueCount: 37307 (1693.5%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "go-classifier", count: 35104 (1593.5%), valueCount: 105312 (300%), minLength: 0, maxLength: 0, parent.name: "go-classifiers"}
+| | | | | | # Node{name: "go-classifiers", count: 2203 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "go-classifier", count: 35104 (1593.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "go-classifiers"}
 | | | | | | | | # Node{name: "description", count: 35104 (100%), valueCount: 35104 (100%), minLength: 4, maxLength: 116, parent.name: "go-classifier"}
 | | | | | | | | # Node{name: "category", count: 35104 (100%), valueCount: 35104 (100%), minLength: 7, maxLength: 9, parent.name: "go-classifier"}
 | | | | | | # Node{name: "cellular-location", count: 2203 (100%), valueCount: 2195 (99.6%), minLength: 8, maxLength: 31, parent.name: "polypeptide"}
 | | | | | | # Node{name: "chromosome-location", count: 2203 (100%), valueCount: 2175 (98.7%), minLength: 1, maxLength: 2, parent.name: "polypeptide"}
 | | | | | # Node{name: "organism", count: 2184 (100%), valueCount: 2184 (100%), minLength: 5, maxLength: 29, parent.name: "transporter"}
-| | | | | # Node{name: "references", count: 2184 (100%), valueCount: 8736 (400%), minLength: 0, maxLength: 0, parent.name: "transporter"}
-| | | | | | # Node{name: "links", count: 2184 (100%), valueCount: 145 (6.6%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "link", count: 78 (3.6%), valueCount: 234 (300%), minLength: 0, maxLength: 0, parent.name: "links"}
+| | | | | # Node{name: "references", count: 2184 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "transporter"}
+| | | | | | # Node{name: "links", count: 2184 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "link", count: 78 (3.6%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "links"}
 | | | | | | | | # Node{name: "title", count: 78 (100%), valueCount: 78 (100%), minLength: 4, maxLength: 114, parent.name: "link"}
 | | | | | | | | # Node{name: "url", count: 78 (100%), valueCount: 78 (100%), minLength: 37, maxLength: 159, parent.name: "link"}
-| | | | | | # Node{name: "articles", count: 2184 (100%), valueCount: 5573 (255.2%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "article", count: 3639 (166.6%), valueCount: 10917 (300%), minLength: 0, maxLength: 0, parent.name: "articles"}
+| | | | | | # Node{name: "articles", count: 2184 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "article", count: 3639 (166.6%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "articles"}
 | | | | | | | | # Node{name: "pubmed-id", count: 3639 (100%), valueCount: 3639 (100%), minLength: 7, maxLength: 8, parent.name: "article"}
 | | | | | | | | # Node{name: "citation", count: 3639 (100%), valueCount: 3660 (100.6%), minLength: 1, maxLength: 643, parent.name: "article"}
-| | | | | | # Node{name: "textbooks", count: 2184 (100%), valueCount: 18 (0.8%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "textbook", count: 9 (0.4%), valueCount: 27 (300%), minLength: 0, maxLength: 0, parent.name: "textbooks"}
+| | | | | | # Node{name: "textbooks", count: 2184 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "textbook", count: 9 (0.4%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "textbooks"}
 | | | | | | | | # Node{name: "citation", count: 9 (100%), valueCount: 9 (100%), minLength: 66, maxLength: 95, parent.name: "textbook"}
 | | | | | | | | # Node{name: "isbn", count: 9 (100%), valueCount: 2 (22.2%), minLength: 17, maxLength: 17, parent.name: "textbook"}
 | | | | | # Node{name: "known-action", count: 2184 (100%), valueCount: 2184 (100%), minLength: 2, maxLength: 7, parent.name: "transporter"}
 | | | | | # Node{name: "name", count: 2184 (100%), valueCount: 2184 (100%), minLength: 7, maxLength: 77, parent.name: "transporter"}
 | | | | | # Node{name: "id", count: 2184 (100%), valueCount: 2184 (100%), minLength: 9, maxLength: 9, parent.name: "transporter"}
-| | | | | # Node{name: "actions", count: 2184 (100%), valueCount: 4365 (199.9%), minLength: 0, maxLength: 0, parent.name: "transporter"}
+| | | | | # Node{name: "actions", count: 2184 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "transporter"}
 | | | | | | # Node{name: "action", count: 2350 (107.6%), valueCount: 2350 (100%), minLength: 5, maxLength: 14, parent.name: "actions"}
-| | | # Node{name: "dosages", count: 11033 (100%), valueCount: 36785 (333.4%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "dosage", count: 33896 (307.2%), valueCount: 135584 (400%), minLength: 0, maxLength: 0, parent.name: "dosages"}
+| | | # Node{name: "dosages", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "dosage", count: 33896 (307.2%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "dosages"}
 | | | | | # Node{name: "route", count: 33896 (100%), valueCount: 33437 (98.6%), minLength: 4, maxLength: 118, parent.name: "dosage"}
 | | | | | # Node{name: "form", count: 33896 (100%), valueCount: 33863 (99.9%), minLength: 3, maxLength: 62, parent.name: "dosage"}
 | | | | | # Node{name: "strength", count: 33896 (100%), valueCount: 27510 (81.2%), minLength: 3, maxLength: 36, parent.name: "dosage"}
-| | | # Node{name: "description", count: 11033 (100%), valueCount: 10215 (92.6%), minLength: 0, maxLength: 1870, parent.name: "drug"}
-| | | # Node{name: "enzymes", count: 11033 (100%), valueCount: 5591 (50.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "enzyme", count: 4280 (38.8%), valueCount: 42827 (1000.6%), minLength: 0, maxLength: 0, parent.name: "enzymes"}
+| | | # Node{name: "description", count: 11033 (100%), valueCount: 8376 (75.9%), minLength: 1, maxLength: 1870, parent.name: "drug"}
+| | | # Node{name: "enzymes", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "enzyme", count: 4280 (38.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "enzymes"}
 | | | | | * Attribute{name: "position", count: 3362 (78.6%), valueCount: 3362 (100%), minLength: 1, maxLength: 3, parent.name: "enzyme"}
-| | | | | # Node{name: "polypeptide", count: 4307 (100.6%), valueCount: 81833 (1900%), minLength: 0, maxLength: 0, parent.name: "enzyme"}
+| | | | | # Node{name: "polypeptide", count: 4307 (100.6%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "enzyme"}
 | | | | | | * Attribute{name: "id", count: 4307 (100%), valueCount: 4307 (100%), minLength: 6, maxLength: 10, parent.name: "polypeptide"}
 | | | | | | * Attribute{name: "source", count: 4307 (100%), valueCount: 4307 (100%), minLength: 6, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "external-identifiers", count: 4307 (100%), valueCount: 30225 (701.8%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "external-identifier", count: 25918 (601.8%), valueCount: 77754 (300%), minLength: 0, maxLength: 0, parent.name: "external-identifiers"}
+| | | | | | # Node{name: "external-identifiers", count: 4307 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "external-identifier", count: 25918 (601.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "external-identifiers"}
 | | | | | | | | # Node{name: "identifier", count: 25918 (100%), valueCount: 25918 (100%), minLength: 2, maxLength: 16, parent.name: "external-identifier"}
 | | | | | | | | # Node{name: "resource", count: 25918 (100%), valueCount: 25918 (100%), minLength: 8, maxLength: 39, parent.name: "external-identifier"}
 | | | | | | # Node{name: "theoretical-pi", count: 4307 (100%), valueCount: 4201 (97.5%), minLength: 3, maxLength: 5, parent.name: "polypeptide"}
 | | | | | | # Node{name: "organism", count: 4307 (100%), valueCount: 4307 (100%), minLength: 3, maxLength: 103, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "ncbi-taxonomy-id", count: 4307 (100%), valueCount: 4307 (100%), minLength: 3, maxLength: 6, parent.name: "organism"}
 | | | | | | # Node{name: "molecular-weight", count: 4307 (100%), valueCount: 4307 (100%), minLength: 7, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "synonyms", count: 4307 (100%), valueCount: 37517 (871.1%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
+| | | | | | # Node{name: "synonyms", count: 4307 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
 | | | | | | | # Node{name: "synonym", count: 33210 (771.1%), valueCount: 33218 (100%), minLength: 1, maxLength: 81, parent.name: "synonyms"}
 | | | | | | # Node{name: "general-function", count: 4307 (100%), valueCount: 4310 (100.1%), minLength: 1, maxLength: 914, parent.name: "polypeptide"}
-| | | | | | # Node{name: "pfams", count: 4307 (100%), valueCount: 9247 (214.7%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "pfam", count: 4940 (114.7%), valueCount: 14820 (300%), minLength: 0, maxLength: 0, parent.name: "pfams"}
+| | | | | | # Node{name: "pfams", count: 4307 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "pfam", count: 4940 (114.7%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pfams"}
 | | | | | | | | # Node{name: "identifier", count: 4940 (100%), valueCount: 4940 (100%), minLength: 7, maxLength: 7, parent.name: "pfam"}
 | | | | | | | | # Node{name: "name", count: 4940 (100%), valueCount: 4940 (100%), minLength: 2, maxLength: 15, parent.name: "pfam"}
 | | | | | | # Node{name: "gene-name", count: 4307 (100%), valueCount: 4306 (100%), minLength: 2, maxLength: 8, parent.name: "polypeptide"}
-| | | | | | # Node{name: "amino-acid-sequence", count: 4307 (100%), valueCount: 26459 (614.3%), minLength: 0, maxLength: 144, parent.name: "polypeptide"}
+| | | | | | # Node{name: "amino-acid-sequence", count: 4307 (100%), valueCount: 26456 (614.3%), minLength: 1, maxLength: 144, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 4307 (100%), valueCount: 4307 (100%), minLength: 5, maxLength: 5, parent.name: "amino-acid-sequence"}
 | | | | | | # Node{name: "specific-function", count: 4307 (100%), valueCount: 4253 (98.7%), minLength: 1, maxLength: 1716, parent.name: "polypeptide"}
 | | | | | | # Node{name: "name", count: 4307 (100%), valueCount: 4315 (100.2%), minLength: 1, maxLength: 68, parent.name: "polypeptide"}
 | | | | | | # Node{name: "transmembrane-regions", count: 4307 (100%), valueCount: 1124 (26.1%), minLength: 4, maxLength: 15, parent.name: "polypeptide"}
 | | | | | | # Node{name: "locus", count: 4307 (100%), valueCount: 4166 (96.7%), minLength: 1, maxLength: 24, parent.name: "polypeptide"}
 | | | | | | # Node{name: "signal-regions", count: 4307 (100%), valueCount: 482 (11.2%), minLength: 2, maxLength: 4, parent.name: "polypeptide"}
-| | | | | | # Node{name: "gene-sequence", count: 4307 (100%), valueCount: 63298 (1469.7%), minLength: 0, maxLength: 153, parent.name: "polypeptide"}
+| | | | | | # Node{name: "gene-sequence", count: 4307 (100%), valueCount: 63275 (1469.1%), minLength: 1, maxLength: 153, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 4307 (100%), valueCount: 4307 (100%), minLength: 5, maxLength: 5, parent.name: "gene-sequence"}
-| | | | | | # Node{name: "go-classifiers", count: 4307 (100%), valueCount: 124547 (2891.7%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "go-classifier", count: 120240 (2791.7%), valueCount: 360720 (300%), minLength: 0, maxLength: 0, parent.name: "go-classifiers"}
+| | | | | | # Node{name: "go-classifiers", count: 4307 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "go-classifier", count: 120240 (2791.7%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "go-classifiers"}
 | | | | | | | | # Node{name: "description", count: 120240 (100%), valueCount: 120240 (100%), minLength: 4, maxLength: 193, parent.name: "go-classifier"}
 | | | | | | | | # Node{name: "category", count: 120240 (100%), valueCount: 120240 (100%), minLength: 7, maxLength: 9, parent.name: "go-classifier"}
 | | | | | | # Node{name: "cellular-location", count: 4307 (100%), valueCount: 4210 (97.7%), minLength: 7, maxLength: 33, parent.name: "polypeptide"}
 | | | | | | # Node{name: "chromosome-location", count: 4307 (100%), valueCount: 4247 (98.6%), minLength: 1, maxLength: 4, parent.name: "polypeptide"}
 | | | | | # Node{name: "inhibition-strength", count: 4280 (100%), valueCount: 4280 (100%), minLength: 4, maxLength: 8, parent.name: "enzyme"}
 | | | | | # Node{name: "organism", count: 4280 (100%), valueCount: 4275 (99.9%), minLength: 3, maxLength: 103, parent.name: "enzyme"}
-| | | | | # Node{name: "references", count: 4280 (100%), valueCount: 17120 (400%), minLength: 0, maxLength: 0, parent.name: "enzyme"}
-| | | | | | # Node{name: "links", count: 4280 (100%), valueCount: 1464 (34.2%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "link", count: 743 (17.4%), valueCount: 2229 (300%), minLength: 0, maxLength: 0, parent.name: "links"}
+| | | | | # Node{name: "references", count: 4280 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "enzyme"}
+| | | | | | # Node{name: "links", count: 4280 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "link", count: 743 (17.4%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "links"}
 | | | | | | | | # Node{name: "title", count: 743 (100%), valueCount: 743 (100%), minLength: 4, maxLength: 145, parent.name: "link"}
 | | | | | | | | # Node{name: "url", count: 743 (100%), valueCount: 807 (108.6%), minLength: 1, maxLength: 655, parent.name: "link"}
-| | | | | | # Node{name: "articles", count: 4280 (100%), valueCount: 8791 (205.4%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "article", count: 5249 (122.6%), valueCount: 15747 (300%), minLength: 0, maxLength: 0, parent.name: "articles"}
+| | | | | | # Node{name: "articles", count: 4280 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "article", count: 5249 (122.6%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "articles"}
 | | | | | | | | # Node{name: "pubmed-id", count: 5249 (100%), valueCount: 5245 (99.9%), minLength: 4, maxLength: 8, parent.name: "article"}
 | | | | | | | | # Node{name: "citation", count: 5249 (100%), valueCount: 5264 (100.3%), minLength: 1, maxLength: 443, parent.name: "article"}
-| | | | | | # Node{name: "textbooks", count: 4280 (100%), valueCount: 14 (0.3%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "textbook", count: 7 (0.2%), valueCount: 21 (300%), minLength: 0, maxLength: 0, parent.name: "textbooks"}
+| | | | | | # Node{name: "textbooks", count: 4280 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "textbook", count: 7 (0.2%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "textbooks"}
 | | | | | | | | # Node{name: "citation", count: 7 (100%), valueCount: 11 (157.1%), minLength: 1, maxLength: 132, parent.name: "textbook"}
 | | | | | | | | # Node{name: "isbn", count: 7 (100%), valueCount: 3 (42.9%), minLength: 10, maxLength: 17, parent.name: "textbook"}
 | | | | | # Node{name: "known-action", count: 4280 (100%), valueCount: 4280 (100%), minLength: 2, maxLength: 7, parent.name: "enzyme"}
 | | | | | # Node{name: "induction-strength", count: 4280 (100%), valueCount: 4280 (100%), minLength: 4, maxLength: 8, parent.name: "enzyme"}
 | | | | | # Node{name: "name", count: 4280 (100%), valueCount: 4289 (100.2%), minLength: 1, maxLength: 68, parent.name: "enzyme"}
 | | | | | # Node{name: "id", count: 4280 (100%), valueCount: 4280 (100%), minLength: 9, maxLength: 9, parent.name: "enzyme"}
-| | | | | # Node{name: "actions", count: 4280 (100%), valueCount: 9047 (211.4%), minLength: 0, maxLength: 0, parent.name: "enzyme"}
+| | | | | # Node{name: "actions", count: 4280 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "enzyme"}
 | | | | | | # Node{name: "action", count: 4920 (115%), valueCount: 4920 (100%), minLength: 5, maxLength: 20, parent.name: "actions"}
-| | | # Node{name: "sequences", count: 1297 (11.8%), valueCount: 525 (40.5%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "sequence", count: 319 (24.6%), valueCount: 1533 (480.6%), minLength: 0, maxLength: 307, parent.name: "sequences"}
+| | | # Node{name: "sequences", count: 1297 (11.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "sequence", count: 319 (24.6%), valueCount: 1530 (479.6%), minLength: 1, maxLength: 307, parent.name: "sequences"}
 | | | | | * Attribute{name: "format", count: 319 (100%), valueCount: 319 (100%), minLength: 5, maxLength: 5, parent.name: "sequence"}
-| | | # Node{name: "targets", count: 11033 (100%), valueCount: 24982 (226.4%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "target", count: 17736 (160.8%), valueCount: 142807 (805.2%), minLength: 0, maxLength: 0, parent.name: "targets"}
+| | | # Node{name: "targets", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "target", count: 17736 (160.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "targets"}
 | | | | | * Attribute{name: "position", count: 10373 (58.5%), valueCount: 10373 (100%), minLength: 1, maxLength: 3, parent.name: "target"}
-| | | | | # Node{name: "polypeptide", count: 18655 (105.2%), valueCount: 354445 (1900%), minLength: 0, maxLength: 0, parent.name: "target"}
+| | | | | # Node{name: "polypeptide", count: 18655 (105.2%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "target"}
 | | | | | | * Attribute{name: "id", count: 18655 (100%), valueCount: 18655 (100%), minLength: 6, maxLength: 10, parent.name: "polypeptide"}
 | | | | | | * Attribute{name: "source", count: 18655 (100%), valueCount: 18655 (100%), minLength: 6, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "external-identifiers", count: 18655 (100%), valueCount: 127844 (685.3%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "external-identifier", count: 109189 (585.3%), valueCount: 327567 (300%), minLength: 0, maxLength: 0, parent.name: "external-identifiers"}
+| | | | | | # Node{name: "external-identifiers", count: 18655 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "external-identifier", count: 109189 (585.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "external-identifiers"}
 | | | | | | | | # Node{name: "identifier", count: 109189 (100%), valueCount: 109189 (100%), minLength: 1, maxLength: 16, parent.name: "external-identifier"}
 | | | | | | | | # Node{name: "resource", count: 109189 (100%), valueCount: 109189 (100%), minLength: 6, maxLength: 39, parent.name: "external-identifier"}
 | | | | | | # Node{name: "theoretical-pi", count: 18655 (100%), valueCount: 17345 (93%), minLength: 3, maxLength: 5, parent.name: "polypeptide"}
 | | | | | | # Node{name: "organism", count: 18655 (100%), valueCount: 18655 (100%), minLength: 3, maxLength: 145, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "ncbi-taxonomy-id", count: 18655 (100%), valueCount: 18655 (100%), minLength: 2, maxLength: 7, parent.name: "organism"}
 | | | | | | # Node{name: "molecular-weight", count: 18655 (100%), valueCount: 18644 (99.9%), minLength: 6, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "synonyms", count: 18655 (100%), valueCount: 93174 (499.5%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
+| | | | | | # Node{name: "synonyms", count: 18655 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
 | | | | | | | # Node{name: "synonym", count: 74519 (399.5%), valueCount: 74543 (100%), minLength: 1, maxLength: 183, parent.name: "synonyms"}
 | | | | | | # Node{name: "general-function", count: 18655 (100%), valueCount: 18090 (97%), minLength: 1, maxLength: 3009, parent.name: "polypeptide"}
-| | | | | | # Node{name: "pfams", count: 18655 (100%), valueCount: 53790 (288.3%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "pfam", count: 35135 (188.3%), valueCount: 105405 (300%), minLength: 0, maxLength: 0, parent.name: "pfams"}
+| | | | | | # Node{name: "pfams", count: 18655 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "pfam", count: 35135 (188.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "pfams"}
 | | | | | | | | # Node{name: "identifier", count: 35135 (100%), valueCount: 35135 (100%), minLength: 7, maxLength: 7, parent.name: "pfam"}
 | | | | | | | | # Node{name: "name", count: 35135 (100%), valueCount: 35135 (100%), minLength: 2, maxLength: 15, parent.name: "pfam"}
 | | | | | | # Node{name: "gene-name", count: 18655 (100%), valueCount: 18014 (96.6%), minLength: 1, maxLength: 14, parent.name: "polypeptide"}
-| | | | | | # Node{name: "amino-acid-sequence", count: 18655 (100%), valueCount: 125125 (670.7%), minLength: 0, maxLength: 192, parent.name: "polypeptide"}
+| | | | | | # Node{name: "amino-acid-sequence", count: 18655 (100%), valueCount: 125002 (670.1%), minLength: 1, maxLength: 192, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 18655 (100%), valueCount: 18655 (100%), minLength: 5, maxLength: 5, parent.name: "amino-acid-sequence"}
 | | | | | | # Node{name: "specific-function", count: 18655 (100%), valueCount: 21734 (116.5%), minLength: 1, maxLength: 10641, parent.name: "polypeptide"}
 | | | | | | # Node{name: "name", count: 18655 (100%), valueCount: 18684 (100.2%), minLength: 1, maxLength: 115, parent.name: "polypeptide"}
 | | | | | | # Node{name: "transmembrane-regions", count: 18655 (100%), valueCount: 23291 (124.9%), minLength: 3, maxLength: 19, parent.name: "polypeptide"}
 | | | | | | # Node{name: "locus", count: 18655 (100%), valueCount: 13216 (70.8%), minLength: 1, maxLength: 28, parent.name: "polypeptide"}
 | | | | | | # Node{name: "signal-regions", count: 18655 (100%), valueCount: 5564 (29.8%), minLength: 2, maxLength: 10, parent.name: "polypeptide"}
-| | | | | | # Node{name: "gene-sequence", count: 18655 (100%), valueCount: 289755 (1553.2%), minLength: 0, maxLength: 277, parent.name: "polypeptide"}
+| | | | | | # Node{name: "gene-sequence", count: 18655 (100%), valueCount: 289398 (1551.3%), minLength: 1, maxLength: 277, parent.name: "polypeptide"}
 | | | | | | | * Attribute{name: "format", count: 18655 (100%), valueCount: 18655 (100%), minLength: 5, maxLength: 5, parent.name: "gene-sequence"}
-| | | | | | # Node{name: "go-classifiers", count: 18655 (100%), valueCount: 500983 (2685.5%), minLength: 0, maxLength: 0, parent.name: "polypeptide"}
-| | | | | | | # Node{name: "go-classifier", count: 482328 (2585.5%), valueCount: 1446984 (300%), minLength: 0, maxLength: 0, parent.name: "go-classifiers"}
+| | | | | | # Node{name: "go-classifiers", count: 18655 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "polypeptide"}
+| | | | | | | # Node{name: "go-classifier", count: 482328 (2585.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "go-classifiers"}
 | | | | | | | | # Node{name: "description", count: 482328 (100%), valueCount: 482580 (100.1%), minLength: 1, maxLength: 193, parent.name: "go-classifier"}
 | | | | | | | | # Node{name: "category", count: 482328 (100%), valueCount: 482328 (100%), minLength: 7, maxLength: 9, parent.name: "go-classifier"}
 | | | | | | # Node{name: "cellular-location", count: 18655 (100%), valueCount: 16221 (87%), minLength: 6, maxLength: 61, parent.name: "polypeptide"}
 | | | | | | # Node{name: "chromosome-location", count: 18655 (100%), valueCount: 13999 (75%), minLength: 1, maxLength: 4, parent.name: "polypeptide"}
 | | | | | # Node{name: "organism", count: 17736 (100%), valueCount: 17723 (99.9%), minLength: 3, maxLength: 122, parent.name: "target"}
-| | | | | # Node{name: "references", count: 17736 (100%), valueCount: 70944 (400%), minLength: 0, maxLength: 0, parent.name: "target"}
-| | | | | | # Node{name: "links", count: 17736 (100%), valueCount: 629 (3.5%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "link", count: 327 (1.8%), valueCount: 981 (300%), minLength: 0, maxLength: 0, parent.name: "links"}
+| | | | | # Node{name: "references", count: 17736 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "target"}
+| | | | | | # Node{name: "links", count: 17736 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "link", count: 327 (1.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "links"}
 | | | | | | | | # Node{name: "title", count: 327 (100%), valueCount: 327 (100%), minLength: 4, maxLength: 234, parent.name: "link"}
 | | | | | | | | # Node{name: "url", count: 327 (100%), valueCount: 353 (108%), minLength: 1, maxLength: 655, parent.name: "link"}
-| | | | | | # Node{name: "articles", count: 17736 (100%), valueCount: 49389 (278.5%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "article", count: 33711 (190.1%), valueCount: 101133 (300%), minLength: 0, maxLength: 0, parent.name: "articles"}
+| | | | | | # Node{name: "articles", count: 17736 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "article", count: 33711 (190.1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "articles"}
 | | | | | | | | # Node{name: "pubmed-id", count: 33711 (100%), valueCount: 33704 (100%), minLength: 5, maxLength: 8, parent.name: "article"}
 | | | | | | | | # Node{name: "citation", count: 33711 (100%), valueCount: 33794 (100.2%), minLength: 1, maxLength: 846, parent.name: "article"}
-| | | | | | # Node{name: "textbooks", count: 17736 (100%), valueCount: 183 (1%), minLength: 0, maxLength: 0, parent.name: "references"}
-| | | | | | | # Node{name: "textbook", count: 94 (0.5%), valueCount: 282 (300%), minLength: 0, maxLength: 0, parent.name: "textbooks"}
+| | | | | | # Node{name: "textbooks", count: 17736 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "references"}
+| | | | | | | # Node{name: "textbook", count: 94 (0.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "textbooks"}
 | | | | | | | | # Node{name: "citation", count: 94 (100%), valueCount: 108 (114.9%), minLength: 1, maxLength: 174, parent.name: "textbook"}
 | | | | | | | | # Node{name: "isbn", count: 94 (100%), valueCount: 67 (71.3%), minLength: 10, maxLength: 17, parent.name: "textbook"}
 | | | | | # Node{name: "known-action", count: 17736 (100%), valueCount: 17736 (100%), minLength: 2, maxLength: 7, parent.name: "target"}
 | | | | | # Node{name: "name", count: 17736 (100%), valueCount: 17765 (100.2%), minLength: 1, maxLength: 115, parent.name: "target"}
 | | | | | # Node{name: "id", count: 17736 (100%), valueCount: 17736 (100%), minLength: 9, maxLength: 9, parent.name: "target"}
-| | | | | # Node{name: "actions", count: 17736 (100%), valueCount: 13530 (76.3%), minLength: 0, maxLength: 0, parent.name: "target"}
+| | | | | # Node{name: "actions", count: 17736 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "target"}
 | | | | | | # Node{name: "action", count: 6812 (38.4%), valueCount: 6812 (100%), minLength: 5, maxLength: 38, parent.name: "actions"}
 | | | # Node{name: "unii", count: 11033 (100%), valueCount: 6644 (60.2%), minLength: 10, maxLength: 10, parent.name: "drug"}
-| | | # Node{name: "protein-binding", count: 11033 (100%), valueCount: 1764 (16%), minLength: 0, maxLength: 675, parent.name: "drug"}
-| | | # Node{name: "products", count: 11033 (100%), valueCount: 258132 (2339.6%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "product", count: 255243 (2313.5%), valueCount: 4849617 (1900%), minLength: 0, maxLength: 0, parent.name: "products"}
+| | | # Node{name: "protein-binding", count: 11033 (100%), valueCount: 1734 (15.7%), minLength: 1, maxLength: 675, parent.name: "drug"}
+| | | # Node{name: "products", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "product", count: 255243 (2313.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "products"}
 | | | | | # Node{name: "country", count: 255243 (100%), valueCount: 255243 (100%), minLength: 2, maxLength: 6, parent.name: "product"}
 | | | | | # Node{name: "ema-ma-number", count: 255243 (100%), valueCount: 8712 (3.4%), minLength: 14, maxLength: 16, parent.name: "product"}
 | | | | | # Node{name: "ema-product-code", count: 255243 (100%), valueCount: 8712 (3.4%), minLength: 15, maxLength: 15, parent.name: "product"}
@@ -384,36 +384,36 @@ docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.x
 | | | | | # Node{name: "approved", count: 255243 (100%), valueCount: 255243 (100%), minLength: 4, maxLength: 5, parent.name: "product"}
 | | | | | # Node{name: "route", count: 255243 (100%), valueCount: 249965 (97.9%), minLength: 4, maxLength: 118, parent.name: "product"}
 | | | | | # Node{name: "name", count: 255243 (100%), valueCount: 258981 (101.5%), minLength: 1, maxLength: 367, parent.name: "product"}
-| | | | | # Node{name: "ndc-id", count: 255243 (100%), valueCount: 0 (0%), minLength: -1, maxLength: 0, parent.name: "product"}
+| | | | | # Node{name: "ndc-id", count: 255243 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "product"}
 | | | | | # Node{name: "dosage-form", count: 255243 (100%), valueCount: 255180 (100%), minLength: 3, maxLength: 62, parent.name: "product"}
 | | | | | # Node{name: "labeller", count: 255243 (100%), valueCount: 276745 (108.4%), minLength: 1, maxLength: 105, parent.name: "product"}
 | | | | | # Node{name: "over-the-counter", count: 255243 (100%), valueCount: 255243 (100%), minLength: 4, maxLength: 5, parent.name: "product"}
 | | | # Node{name: "fda-label", count: 1212 (11%), valueCount: 1212 (100%), minLength: 71, maxLength: 71, parent.name: "drug"}
-| | | # Node{name: "clearance", count: 11033 (100%), valueCount: 1838 (16.7%), minLength: 0, maxLength: 1381, parent.name: "drug"}
-| | | # Node{name: "atc-codes", count: 11033 (100%), valueCount: 6366 (57.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "atc-code", count: 3987 (36.1%), valueCount: 19935 (500%), minLength: 0, maxLength: 0, parent.name: "atc-codes"}
+| | | # Node{name: "clearance", count: 11033 (100%), valueCount: 1360 (12.3%), minLength: 1, maxLength: 1381, parent.name: "drug"}
+| | | # Node{name: "atc-codes", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "atc-code", count: 3987 (36.1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "atc-codes"}
 | | | | | * Attribute{name: "code", count: 3987 (100%), valueCount: 3987 (100%), minLength: 7, maxLength: 7, parent.name: "atc-code"}
 | | | | | # Node{name: "level", count: 15948 (400%), valueCount: 15948 (100%), minLength: 4, maxLength: 92, parent.name: "atc-code"}
 | | | | | | * Attribute{name: "code", count: 15948 (100%), valueCount: 15948 (100%), minLength: 1, maxLength: 5, parent.name: "level"}
-| | | # Node{name: "patents", count: 11033 (100%), valueCount: 7795 (70.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "patent", count: 6836 (62%), valueCount: 41016 (600%), minLength: 0, maxLength: 0, parent.name: "patents"}
+| | | # Node{name: "patents", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "patent", count: 6836 (62%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "patents"}
 | | | | | # Node{name: "number", count: 6836 (100%), valueCount: 6836 (100%), minLength: 5, maxLength: 12, parent.name: "patent"}
 | | | | | # Node{name: "country", count: 6836 (100%), valueCount: 6836 (100%), minLength: 6, maxLength: 13, parent.name: "patent"}
 | | | | | # Node{name: "approved", count: 6836 (100%), valueCount: 6836 (100%), minLength: 10, maxLength: 10, parent.name: "patent"}
 | | | | | # Node{name: "expires", count: 6836 (100%), valueCount: 6836 (100%), minLength: 10, maxLength: 10, parent.name: "patent"}
 | | | | | # Node{name: "pediatric-extension", count: 6836 (100%), valueCount: 6836 (100%), minLength: 4, maxLength: 5, parent.name: "patent"}
-| | | # Node{name: "categories", count: 11033 (100%), valueCount: 86871 (787.4%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "category", count: 80908 (733.3%), valueCount: 242724 (300%), minLength: 0, maxLength: 0, parent.name: "categories"}
+| | | # Node{name: "categories", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "category", count: 80908 (733.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "categories"}
 | | | | | # Node{name: "category", count: 80908 (100%), valueCount: 81603 (100.9%), minLength: 1, maxLength: 92, parent.name: "category"}
 | | | | | # Node{name: "mesh-id", count: 80908 (100%), valueCount: 68259 (84.4%), minLength: 7, maxLength: 10, parent.name: "category"}
-| | | # Node{name: "prices", count: 11033 (100%), valueCount: 12934 (117.2%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "price", count: 11810 (107%), valueCount: 47240 (400%), minLength: 0, maxLength: 0, parent.name: "prices"}
+| | | # Node{name: "prices", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "price", count: 11810 (107%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "prices"}
 | | | | | # Node{name: "unit", count: 11810 (100%), valueCount: 11810 (100%), minLength: 1, maxLength: 20, parent.name: "price"}
 | | | | | # Node{name: "cost", count: 11810 (100%), valueCount: 11810 (100%), minLength: 3, maxLength: 8, parent.name: "price"}
 | | | | | | * Attribute{name: "currency", count: 11810 (100%), valueCount: 11810 (100%), minLength: 3, maxLength: 3, parent.name: "cost"}
 | | | | | # Node{name: "description", count: 11810 (100%), valueCount: 11872 (100.5%), minLength: 1, maxLength: 84, parent.name: "price"}
-| | | # Node{name: "salts", count: 11033 (100%), valueCount: 3651 (33.1%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "salt", count: 2104 (19.1%), valueCount: 16376 (778.3%), minLength: 0, maxLength: 0, parent.name: "salts"}
+| | | # Node{name: "salts", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "salt", count: 2104 (19.1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "salts"}
 | | | | | # Node{name: "inchikey", count: 2104 (100%), valueCount: 1878 (89.3%), minLength: 27, maxLength: 27, parent.name: "salt"}
 | | | | | # Node{name: "average-mass", count: 1876 (89.2%), valueCount: 1876 (100%), minLength: 4, maxLength: 9, parent.name: "salt"}
 | | | | | # Node{name: "name", count: 2104 (100%), valueCount: 2104 (100%), minLength: 4, maxLength: 67, parent.name: "salt"}
@@ -422,42 +422,41 @@ docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.x
 | | | | | | * Attribute{name: "primary", count: 2104 (100%), valueCount: 2104 (100%), minLength: 4, maxLength: 4, parent.name: "drugbank-id"}
 | | | | | # Node{name: "unii", count: 2104 (100%), valueCount: 1995 (94.8%), minLength: 10, maxLength: 10, parent.name: "salt"}
 | | | | | # Node{name: "monoisotopic-mass", count: 1876 (89.2%), valueCount: 1876 (100%), minLength: 6, maxLength: 14, parent.name: "salt"}
-| | | # Node{name: "manufacturers", count: 11033 (100%), valueCount: 6811 (61.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "manufacturers", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "manufacturer", count: 5979 (54.2%), valueCount: 5985 (100.1%), minLength: 1, maxLength: 78, parent.name: "manufacturers"}
 | | | | | * Attribute{name: "generic", count: 5979 (100%), valueCount: 5979 (100%), minLength: 4, maxLength: 5, parent.name: "manufacturer"}
-| | | | | * Attribute{name: "url", count: 5979 (100%), valueCount: 5979 (100%), minLength: 0, maxLength: 22, parent.name: "manufacturer"}
-| | | # Node{name: "drug-interactions", count: 11033 (100%), valueCount: 697032 (6317.7%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "drug-interaction", count: 694128 (6291.4%), valueCount: 2776512 (400%), minLength: 0, maxLength: 0, parent.name: "drug-interactions"}
+| | | | | * Attribute{name: "url", count: 5979 (100%), valueCount: 19 (0.3%), minLength: 22, maxLength: 22, parent.name: "manufacturer"}
+| | | # Node{name: "drug-interactions", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "drug-interaction", count: 694128 (6291.4%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug-interactions"}
 | | | | | # Node{name: "name", count: 694128 (100%), valueCount: 694128 (100%), minLength: 4, maxLength: 80, parent.name: "drug-interaction"}
 | | | | | # Node{name: "description", count: 694128 (100%), valueCount: 694128 (100%), minLength: 52, maxLength: 198, parent.name: "drug-interaction"}
 | | | | | # Node{name: "drugbank-id", count: 694128 (100%), valueCount: 694128 (100%), minLength: 7, maxLength: 7, parent.name: "drug-interaction"}
-| | | # Node{name: "groups", count: 11033 (100%), valueCount: 24257 (219.9%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "groups", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "group", count: 13224 (119.9%), valueCount: 13224 (100%), minLength: 7, maxLength: 15, parent.name: "groups"}
-| | | # Node{name: "packagers", count: 11033 (100%), valueCount: 21775 (197.4%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "packager", count: 20558 (186.3%), valueCount: 61674 (300%), minLength: 0, maxLength: 0, parent.name: "packagers"}
+| | | # Node{name: "packagers", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "packager", count: 20558 (186.3%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "packagers"}
 | | | | | # Node{name: "name", count: 20558 (100%), valueCount: 20916 (101.7%), minLength: 1, maxLength: 58, parent.name: "packager"}
 | | | | | # Node{name: "url", count: 20558 (100%), valueCount: 15345 (74.6%), minLength: 17, maxLength: 52, parent.name: "packager"}
-| | | # Node{name: "international-brands", count: 11033 (100%), valueCount: 10649 (96.5%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "international-brand", count: 8776 (79.5%), valueCount: 26328 (300%), minLength: 0, maxLength: 0, parent.name: "international-brands"}
+| | | # Node{name: "international-brands", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "international-brand", count: 8776 (79.5%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "international-brands"}
 | | | | | # Node{name: "name", count: 8776 (100%), valueCount: 8780 (100%), minLength: 1, maxLength: 52, parent.name: "international-brand"}
 | | | | | # Node{name: "company", count: 8776 (100%), valueCount: 5094 (58%), minLength: 1, maxLength: 233, parent.name: "international-brand"}
-| | | # Node{name: "reactions", count: 11033 (100%), valueCount: 2740 (24.8%), minLength: 0, maxLength: 0, parent.name: "drug"}
-| | | | # Node{name: "reaction", count: 2108 (19.1%), valueCount: 10540 (500%), minLength: 0, maxLength: 0, parent.name: "reactions"}
+| | | # Node{name: "reactions", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
+| | | | # Node{name: "reaction", count: 2108 (19.1%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "reactions"}
 | | | | | # Node{name: "sequence", count: 2108 (100%), valueCount: 2108 (100%), minLength: 1, maxLength: 1, parent.name: "reaction"}
-| | | | | # Node{name: "right-element", count: 2108 (100%), valueCount: 6324 (300%), minLength: 0, maxLength: 0, parent.name: "reaction"}
+| | | | | # Node{name: "right-element", count: 2108 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "reaction"}
 | | | | | | # Node{name: "name", count: 2108 (100%), valueCount: 2119 (100.5%), minLength: 2, maxLength: 122, parent.name: "right-element"}
 | | | | | | # Node{name: "drugbank-id", count: 2108 (100%), valueCount: 2108 (100%), minLength: 7, maxLength: 10, parent.name: "right-element"}
-| | | | | # Node{name: "enzymes", count: 2108 (100%), valueCount: 3555 (168.6%), minLength: 0, maxLength: 0, parent.name: "reaction"}
-| | | | | | # Node{name: "enzyme", count: 2336 (110.8%), valueCount: 9344 (400%), minLength: 0, maxLength: 0, parent.name: "enzymes"}
+| | | | | # Node{name: "enzymes", count: 2108 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "reaction"}
+| | | | | | # Node{name: "enzyme", count: 2336 (110.8%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "enzymes"}
 | | | | | | | # Node{name: "uniprot-id", count: 2336 (100%), valueCount: 2287 (97.9%), minLength: 6, maxLength: 6, parent.name: "enzyme"}
 | | | | | | | # Node{name: "name", count: 2336 (100%), valueCount: 2338 (100.1%), minLength: 1, maxLength: 68, parent.name: "enzyme"}
 | | | | | | | # Node{name: "drugbank-id", count: 2336 (100%), valueCount: 2336 (100%), minLength: 9, maxLength: 9, parent.name: "enzyme"}
-| | | | | # Node{name: "left-element", count: 2108 (100%), valueCount: 6324 (300%), minLength: 0, maxLength: 0, parent.name: "reaction"}
+| | | | | # Node{name: "left-element", count: 2108 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "reaction"}
 | | | | | | # Node{name: "name", count: 2108 (100%), valueCount: 2108 (100%), minLength: 2, maxLength: 61, parent.name: "left-element"}
 | | | | | | # Node{name: "drugbank-id", count: 2108 (100%), valueCount: 2108 (100%), minLength: 7, maxLength: 10, parent.name: "left-element"}
-| | | # Node{name: "ahfs-codes", count: 11033 (100%), valueCount: 2927 (26.5%), minLength: 0, maxLength: 0, parent.name: "drug"}
+| | | # Node{name: "ahfs-codes", count: 11033 (100%), valueCount: 0 (0%), minLength: N/A, maxLength: N/A, parent.name: "drug"}
 | | | | # Node{name: "ahfs-code", count: 1606 (14.6%), valueCount: 1606 (100%), minLength: 8, maxLength: 11, parent.name: "ahfs-codes"}
 | | | # Node{name: "drugbank-id", count: 15850 (143.7%), valueCount: 15850 (100%), minLength: 7, maxLength: 12, parent.name: "drug"}
 | | | | * Attribute{name: "primary", count: 11033 (69.6%), valueCount: 11033 (100%), minLength: 4, maxLength: 4, parent.name: "drugbank-id"}
-
  ```
