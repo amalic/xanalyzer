@@ -11,14 +11,16 @@ public abstract class BaseNode {
 	public long count = 1;
 	public long valueCount = 0;
 	public long minLength = -1;
-	public long maxLength = 0;
+	public long maxLength = -1;
 	
 	public void setValue(String value) {
 		if(value!=null) {
-			valueCount++;
 			long length = value.trim().length();
-			minLength = minLength == -1 || length < minLength ? length : minLength;
-			maxLength = length > maxLength ? length : maxLength;
+			if(length > 0) {
+				valueCount++;
+				minLength = minLength == -1 || length < minLength ? length : minLength;
+				maxLength = length > maxLength ? length : maxLength;
+			}
 		}
 	}
 	
@@ -30,8 +32,8 @@ public abstract class BaseNode {
 				+ "{name: \"" + name + "\""
 				+ ", count: " + count + " " +  toPercent(count, parent!=null ? parent.count : 0) + ""
 				+ ", valueCount: " + valueCount + " " +  toPercent(valueCount, count)
-				+ ", minLength: " + minLength
-				+ ", maxLength: " + maxLength
+				+ ", minLength: " + (minLength != -1 ? minLength : "N/A")
+				+ ", maxLength: " + (maxLength != -1 ? maxLength : "N/A") 
 				+ (parent != null ? ", parent.name: \"" + parent.name + "\"" : "")
 				+ "}"; 
 	}
