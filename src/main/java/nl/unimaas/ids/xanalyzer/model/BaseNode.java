@@ -26,6 +26,8 @@ public abstract class BaseNode {
 	
 	abstract String getType();
 	
+	abstract String getXPath();
+	
 	@Override
 	public String toString() {
 		return getType() 
@@ -33,7 +35,8 @@ public abstract class BaseNode {
 				+ ", count: " + count + " " +  toPercent(count, parent!=null ? parent.count : 0) + ""
 				+ ", valueCount: " + valueCount + " " +  toPercent(valueCount, count)
 				+ ", minLength: " + (minLength != -1 ? minLength : "N/A")
-				+ ", maxLength: " + (maxLength != -1 ? maxLength : "N/A") 
+				+ ", maxLength: " + (maxLength != -1 ? maxLength : "N/A")
+				+ ", xPath: \"" + getXPath() + "\""
 				+ (parent != null ? ", parent.name: \"" + parent.name + "\"" : "")
 				+ "}"; 
 	}

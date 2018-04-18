@@ -1,5 +1,6 @@
 package nl.unimaas.ids.xanalyzer.model;
 
+import java.security.GeneralSecurityException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +47,13 @@ public class Node extends BaseNode {
 	@Override
 	String getType() {
 		return Node.class.getSimpleName();
+	}
+
+
+
+	@Override
+	String getXPath() {
+		return parent.getXPath() + "/" + name;
 	}
 
 }

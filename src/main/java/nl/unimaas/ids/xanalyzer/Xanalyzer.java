@@ -8,12 +8,13 @@ import javax.xml.stream.XMLStreamReader;
 
 import nl.unimaas.ids.xanalyzer.model.Attribute;
 import nl.unimaas.ids.xanalyzer.model.Node;
+import nl.unimaas.ids.xanalyzer.model.RootNode;
 
 public class Xanalyzer {
 	
 	public static void main(String[] args) throws Exception {
 		
-		Node xmlDocument = new Node();
+		Node xmlDocument = new RootNode();
 		xmlDocument.name = "XML Document";
 		
 		XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();

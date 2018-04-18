@@ -6,5 +6,10 @@ public class Attribute extends BaseNode {
 	String getType() {
 		return Attribute.class.getSimpleName();
 	}
+	
+	@Override
+	String getXPath() {
+		return parent.getXPath() + "/@" + name;
+	}
 
 }
