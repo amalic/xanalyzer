@@ -13,8 +13,8 @@ public class Xanalyzer {
 	
 	public static void main(String[] args) throws Exception {
 		
-		Node node = new Node();
-		node.name = "XML Document";
+		Node xmlDocument = new Node();
+		xmlDocument.name = "XML Document";
 		
 		XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
 		XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(new FileInputStream(args[0]));
@@ -27,30 +27,28 @@ public class Xanalyzer {
 			if(event==XMLStreamConstants.START_ELEMENT) {
 				name = xmlStreamReader.getLocalName();
 				value = null;
-				node = node.registerChild(name, value);
+				xmlDocument = xmlDocument.registerChild(name, value);
 				for(int i=0; i<xmlStreamReader.getAttributeCount(); i++) {
-					node.registerAttribute(xmlStreamReader.getAttributeLocalName(i), xmlStreamReader.getAttributeValue(i));
+					xmlDocument.registerAttribute(xmlStreamReader.getAttributeLocalName(i), xmlStreamReader.getAttributeValue(i));
 				}
 			} else if (event == XMLStreamConstants.CHARACTERS) {
-				node.setValue(xmlStreamReader.getText());
+				xmlDocument.setValue(xmlStreamReader.getText());
 			} else if (event==XMLStreamConstants.END_ELEMENT) {
-				node = node.parent;
+				xmlDocument = xmlDocument.parent;
 			}
 		}
 		
-		printNode(node, "" , "| ");
+		printStructure(xmlDocument, "" , "| ");
 		
 		xmlStreamReader.close();
-		
 	}
 
-	private static void printNode(Node node, String indent, String baseIndent) {
+	private static void printStructure(Node node, String indent, String baseIndent) {
 		System.out.println(indent + "# " + node.toString());
 		for(Attribute attribute : node.attributes.values())
 			System.out.println(indent + baseIndent + "* " + attribute.toString());
 		for(Node child : node.childs.values())
-			printNode(child, indent + baseIndent, baseIndent);
-		
+			printStructure(child, indent + baseIndent, baseIndent);
 	}
 
 }
