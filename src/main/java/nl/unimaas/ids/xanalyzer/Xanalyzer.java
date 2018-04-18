@@ -33,8 +33,7 @@ public class Xanalyzer {
 				}
 			} else if (event == XMLStreamConstants.CHARACTERS) {
 				node.setValue(xmlStreamReader.getText());
-			}
-			else if (event==XMLStreamConstants.END_ELEMENT) {
+			} else if (event==XMLStreamConstants.END_ELEMENT) {
 				node = node.parent;
 			}
 		}
