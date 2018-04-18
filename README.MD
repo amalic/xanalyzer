@@ -16,7 +16,7 @@ docker run --rm -it-v /data/xanalyzer/:/data/ xanalyzer "/data/full database.xml
 ```
 ### Windows
 ```
-docker run --rm -it-v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.xml"
+docker run --rm -it -v c:/data/xanalyzer/:/data/ xanalyzer "/data/full database.xml"
 ```
 
 #### Example output for drugbank
