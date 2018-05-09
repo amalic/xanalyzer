@@ -1,6 +1,8 @@
 package nl.unimaas.ids.xanalyzer;
 
 import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.zip.GZIPInputStream;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -17,8 +19,12 @@ public class Xanalyzer {
 		Node xmlDocument = new RootNode();
 		xmlDocument.name = "XML Document";
 		
+		InputStream is = new FileInputStream(args[0]);
+		if(args[0].endsWith(".gz"))
+			is = new GZIPInputStream(is);
+		
 		XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
-		XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(new FileInputStream(args[0]));
+		XMLStreamReader xmlStreamReader = xmlInputFactory.createXMLStreamReader(is);
 		
 		String name = null;
 		String value = null;
